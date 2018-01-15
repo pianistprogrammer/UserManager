@@ -2,12 +2,12 @@ version: '3'
 services:
   web:
     image: andela-devops-assessment
-    build: ./server
+    build: ./web-server
     command: npm start
     ports:
       - "3000:3000"
     volumes:
-      - ./server:/usr/src/app
+      - ./web-server:/usr/src/app
       - /usr/src/app/node_modules
     depends_on:
       - "mongo"
